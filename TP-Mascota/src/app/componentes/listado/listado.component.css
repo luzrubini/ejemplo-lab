@@ -1,0 +1,22 @@
+div{
+    font-family: Arial;
+	font-size: 14px;
+}
+
+.container {
+    margin: 12px;
+    width: 50px;
+}
+
+img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.mascota {
+    border: 1px solid black;
+    margin: 2px;
+    width: 300px;
+    font: italic;
+}

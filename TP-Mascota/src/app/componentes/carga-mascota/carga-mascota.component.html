@@ -1,0 +1,23 @@
+<div>
+    CARGAR MASCOTA:
+    <br><br>
+    Nombre: <input type="text" [(ngModel)]="nombre">
+    <br><br>
+    Imagen: <input type="text" [(ngModel)]="foto">
+    <br><br>
+    Tipo: <select [(ngModel)]="tipo" name="tipo" form="tipoform">
+        <option value="perro">Perro</option>
+        <option value="gato">Gato</option>
+        <option value="pez">Pez</option>
+    </select>
+    <br><br>
+    <input type="button" value="Enviar" (click)="enviar($event)">
+    <br><br>
+
+    <div *ngFor="let mascota of lista; index as i" class="mascota" width = 50>
+        <app-mascota 
+            [mascota]="mascota">
+        </app-mascota>
+
+    </div>
+</div>

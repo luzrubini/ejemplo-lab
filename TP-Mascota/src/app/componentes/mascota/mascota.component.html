@@ -1,0 +1,8 @@
+<app-listado
+    [mascota]="mascota"
+    (detalle)="mostrarDetalle($event)">
+</app-listado>
+<div *ngIf="mostrarDetalles == true">
+    <h5 [style]="mascota.color">Es de tipo {{mascota.tipo}} </h5>
+    <img [src]="mascota.foto" alt="foto" srcset="">
+</div>

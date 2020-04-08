@@ -1,0 +1,33 @@
+<!-- CLASE 01 (26-03)
+
+<div>
+    <img [src]="srcFoto" alt="">
+    <br><br>
+    Hello {{nombre}}
+    <br><br>
+    <input type="text" [value]="nombre">
+    <input type="button" value="Enviar" (click)="enviar($event)">
+</div>-->
+
+<!--CLASE 02 (02-04)-->
+<div>
+    <img [src]="srcFoto" alt="">
+    <br><br>
+    Hello {{nombre}}
+    <br><br>
+    <input type="text" [(ngModel)]="nombre">
+    <input type="button" value="Enviar" (click)="enviar($event)">
+
+    <div *ngIf="nombre == 'Armin'"> 
+        <br>
+        La mascota se llama {{nombre}} 
+    </div>
+    <div *ngFor="let mascota of lista; index as i" class="mascota">
+        <!--Todo lo que se va a enviar va dentro de <app-mascota>-->
+        <app-mascota
+            (turno)="sacarTurno($event)"
+            [mascota]="mascota">
+        </app-mascota>
+    </div>
+    
+</div>
